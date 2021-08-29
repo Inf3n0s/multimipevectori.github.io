@@ -16,10 +16,6 @@ if (isset($_POST['submit'])){
             $headers = "From: ".$userEmail;
 
             $result = mail($to,$subject,$body,$headers);
-            if($result)
-                header("Location: thanks.php");
-			else header("Location: errormail.php"); 
-            
         }
 ?>
 
