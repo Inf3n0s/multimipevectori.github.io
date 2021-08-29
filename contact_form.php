@@ -16,6 +16,7 @@ if (isset($_POST['submit'])){
             $headers = "From: ".$userEmail;
 
             $result = mail($to,$subject,$body,$headers);
+            header("Location: index.html?mailsend");
         }
 ?>
 
