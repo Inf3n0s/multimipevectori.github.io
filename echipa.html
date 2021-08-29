@@ -119,20 +119,22 @@
           <div class="col-lg-4">
             <div class="contact-form sm-m-30px-b">
               <h4>Spune-ne părerea ta</h4>
-              <form>
+              <form action="./static/contact_form.php" method="POST">
                 <div class="m-15px-b">
-                  <input type="text" class="form-control" placeholder="Nume" value="" required="">
+                  <input type="text"  name="name" class="form-control" placeholder="Nume" value="" required="">
                 </div>
                 <div class="m-15px-b">
-                  <input type="text" class="form-control" placeholder="Emailul tău" value="" required="">
+                  <input type="email" name="email" class="form-control" placeholder="Emailul tău" value="" required="">
                 </div>
                 <div class="m-15px-b">
-                  <input type="text" class="form-control" placeholder="Subiect" value="" required="">
+                  <input type="text"  name="subject" class="form-control" placeholder="Subiect" value="" required="">
                 </div>
                 <div class="m-15px-b">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mesajul tău" rows="3"></textarea>
+                  <textarea class="form-control" name="message" placeholder="Mesajul tău" rows="3" maxlength="5000"></textarea>
                 </div>
-                <button class="m-btn btn-theme">Trimite</button>
+                <span id="rchars">5000</span> Character(s) Remaining 
+              
+                <button type="submit" name="submit" id="submit" value="SUBMIT" class="m-btn btn-theme">Trimite</button>
               </form>
             </div> <!-- contact fomr -->
           </div> <!-- col -->
@@ -226,6 +228,7 @@
   <script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
   <script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
   <!-- custom -->
+  <script src="./static/js/maxlenght.js"></script>
   <script src="static/js/custom.js"></script>
 
 </body>
